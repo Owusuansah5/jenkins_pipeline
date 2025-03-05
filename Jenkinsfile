@@ -20,6 +20,7 @@ pipeline {
             steps{
                 sh 'docker -v'
                 sh 'docker build -t jenkins-ci .'
+                sh 'docker build -t imageversion .'
             }
         }
         stage('dockerImageTag'){
